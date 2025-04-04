@@ -1,0 +1,236 @@
+/* VARIABLES GLOBALES */
+:root {
+    --dark-bg: #121212;
+    --blue-bg: #001f3d;
+    --text-color: #ffffff;
+    --nav-bg: rgba(0, 0, 0, 0.8);
+    --hover-bg: rgba(255, 255, 255, 0.1);
+    --hover-bg-dark: rgba(50, 50, 50, 0.9);
+    --border-color: #ffffff;
+}
+
+/* THÈME SOMBRE */
+body.dark-theme {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* NAVBAR LATÉRALE */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: var(--nav-bg);
+    overflow-x: hidden;
+    transition: left 0.3s ease;
+    padding-top: 60px;
+    z-index: 999;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li a {
+    padding: 12px 24px;
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: var(--hover-bg);
+}
+
+.open-btn {
+    font-size: 26px;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+/* EN-TÊTE */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+    position: relative;
+}
+
+#particles-js {
+    position: fixed; /* reste fixe en fond */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* en arrière-plan */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+/* TEXTES & TITRES */
+.title {
+    color: var(--text-color);
+    font-size: clamp(2rem, 8vw, 5rem);
+}
+
+.themecolor {
+    font-size: clamp(1rem, 5vw, 2.5rem);
+}
+
+.text {
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    text-align: left;
+    margin-left: 15px;
+}
+
+.maintitle {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: bold;
+}
+
+.text1 {
+    font-size: clamp(1.1rem, 3vw, 1.6rem);
+    font-weight: bold;
+    text-align: left;
+    margin-left: 8px;
+}
+
+/* BOUTON PRINT */
+.print {
+    background-color: var(--nav-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 10px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    text-decoration: none;
+}
+
+.print:where(a) {
+  line-height: normal;
+}
+
+.print:hover {
+    background-color: var(--hover-bg-dark);
+}
+
+/* IMPRESSION */
+@media print {
+    body * {
+        visibility: hidden;
+        font-size: 12px;
+    }
+
+    header, header * {
+        visibility: visible;
+    }
+
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    #particles-js {
+        display: none;
+    }
+
+    .maintitle {
+        font-size: 20px;
+    }
+
+    .text1 {
+        font-size: 16px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+}
+
+body.sidebar-open header {
+    margin-left: 250px;
+}
+
+/* RESPONSIVE MOBILE */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 30px 15px;
+    }
+
+    .sidebar {
+        width: 80%;
+    }
+
+    .open-btn {
+        font-size: 24px;
+    }
+
+    .title {
+        font-size: clamp(2rem, 10vw, 3.5rem);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    .text, .text1, .maintitle, .themecolor {
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    .print {
+        width: 90%;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header {
+        padding: 80px 100px;
+    }
+
+    .title {
+        font-size: clamp(3rem, 6vw, 6rem);
+    }
+
+    .text {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
