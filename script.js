@@ -10,9 +10,10 @@
     }
 
 function toggleMenu() {
-  const navbar = document.getElementById("navbar");
-  navbar.classList.toggle("open");
+    const navbar = document.getElementById("navbar");
+    navbar.classList.toggle("open");
 }
+
 
 
 document.getElementById('menu-toggle').addEventListener('click', function() {
