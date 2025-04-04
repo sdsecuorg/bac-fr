@@ -9,13 +9,14 @@
         document.body.removeChild(a);
     }
 
-document.getElementById("openBtn").addEventListener("click", () => {
-    document.getElementById("sidebar").style.left = "0";
+document.getElementById("openBtn").addEventListener("click", function() {
+    document.getElementById("sidebar").style.left = "0";  // Affiche la navbar
 });
 
-document.getElementById("closeBtn").addEventListener("click", () => {
-    document.getElementById("sidebar").style.left = "-250px";
+document.getElementById("closeBtn").addEventListener("click", function() {
+    document.getElementById("sidebar").style.left = "-250px";  // Cache la navbar
 });
+
 
 
 function printHeader() {
