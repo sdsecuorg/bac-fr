@@ -19,6 +19,12 @@ function toggleMenu() {
   }
 }
 
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    var navbar = document.getElementById('navbar');
+    navbar.classList.toggle('open');  // Ajouter ou enlever la classe 'open'
+});
+
+
 
 function printHeader() {
     window.print();
