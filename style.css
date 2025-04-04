@@ -23,7 +23,7 @@ body.dark-theme {
     width: 250px;
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -250px; /* Initialement cachée */
     background-color: var(--nav-bg);
     overflow-x: hidden;
     transition: left 0.3s ease;
@@ -181,18 +181,13 @@ html, body {
     }
 }
 
-body.sidebar-open header {
-    margin-left: 250px;
-}
-
-/* RESPONSIVE MOBILE */
-
+/* RESPONSIVE MOBILE & TABLET */
 @media screen and (max-width: 768px) {
-    /* Navbar */
+    /* Navbar cachée par défaut */
     .sidebar {
-        width: 70%;
-        left: -70%;
+        left: -100%; /* Cachée hors écran */
     }
+    /* Affichage du bouton de menu */
     .open-btn {
         font-size: 22px;
         top: 15px;
@@ -205,7 +200,7 @@ body.sidebar-open header {
         font-size: 30px;
     }
 
-    /* Texts */
+    /* Textes */
     .text, .text1, .maintitle, .themecolor {
         margin-left: auto;
         margin-right: auto;
@@ -224,17 +219,16 @@ body.sidebar-open header {
 }
 
 @media screen and (max-width: 480px) {
-    /* Navbar */
+    /* Navbar cachée par défaut */
     .sidebar {
-        width: 100%;
-        left: -100%;
+        left: -100%; /* Cachée hors écran */
     }
 
     .open-btn {
         font-size: 24px;
     }
 
-    /* Texts */
+    /* Textes */
     .text, .text1, .maintitle, .themecolor {
         margin-left: 10px;
         text-align: center;
