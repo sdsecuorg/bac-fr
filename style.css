@@ -102,9 +102,7 @@ body.blue-theme {
 	display:none;
 }
 
-.menu:hover {
-    background-color: var(--hover-bg-dark);
-}
+
 
 /* EN-TÊTE */
 header {
@@ -224,6 +222,21 @@ main {
     .themecolor {
         font-size: 30px;
     }
+
+	#menu {
+	position: fixed;
+    top: 10px;
+    left: 15px;
+    padding: 10px 18px;
+    font-size: 16px;
+    color: var(--text-color);
+    background-color: var(--nav-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    z-index: 101;
+	}
 
     .text {
         font-size: 16px;
