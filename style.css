@@ -134,7 +134,10 @@ html, body {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    position: relative;
+    position: fixed; /* Fixe la position des boutons en haut à gauche */
+    top: 10px;  /* 10px du haut */
+    left: 10px; /* 10px de la gauche */
+    z-index: 1000; /* Permet de superposer les boutons au-dessus du contenu */
     text-decoration: none;
 }
 
@@ -215,6 +218,12 @@ html, body {
 
     .title {
         font-size: clamp(2rem, 10vw, 3.5rem);
+    }
+
+    /* Ajustements des boutons */
+    .print {
+        font-size: 14px;
+        padding: 8px 12px;
     }
 }
 
