@@ -95,6 +95,7 @@ html, body {
     padding: 0;
     height: 100%;
 }
+
 /* TEXTES & TITRES */
 .title {
     color: var(--text-color);
@@ -185,17 +186,36 @@ body.sidebar-open header {
 }
 
 /* RESPONSIVE MOBILE */
+
 @media screen and (max-width: 768px) {
+    /* Navbar */
+    .sidebar {
+        width: 70%;
+        left: -70%;
+    }
+    .open-btn {
+        font-size: 22px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .close-btn {
+        top: 15px;
+        right: 20px;
+        font-size: 30px;
+    }
+
+    /* Texts */
+    .text, .text1, .maintitle, .themecolor {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        max-width: 90%;
+    }
+
+    /* Header */
     header {
         padding: 30px 15px;
-    }
-
-    .sidebar {
-        width: 80%;
-    }
-
-    .open-btn {
-        font-size: 24px;
     }
 
     .title {
@@ -204,10 +224,17 @@ body.sidebar-open header {
 }
 
 @media screen and (max-width: 480px) {
+    /* Navbar */
     .sidebar {
         width: 100%;
+        left: -100%;
     }
 
+    .open-btn {
+        font-size: 24px;
+    }
+
+    /* Texts */
     .text, .text1, .maintitle, .themecolor {
         margin-left: 10px;
         text-align: center;
@@ -217,6 +244,15 @@ body.sidebar-open header {
         width: 90%;
         padding: 8px 12px;
         font-size: 14px;
+    }
+
+    /* Header */
+    header {
+        padding: 20px 10px;
+    }
+
+    .title {
+        font-size: clamp(1.8rem, 8vw, 3rem);
     }
 }
 
