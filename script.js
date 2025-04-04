@@ -9,6 +9,17 @@
         document.body.removeChild(a);
     }
 
+function toggleMenu() {
+  const navbar = document.getElementById('navbar');
+  if (navbar.style.display === 'flex') {
+    navbar.style.display = 'none';
+  } else {
+    navbar.style.display = 'flex';
+    navbar.style.flexDirection = 'column'; // Optionnel pour s'assurer qu'elle s'affiche bien
+  }
+}
+
+
 function printHeader() {
     window.print();
 }
