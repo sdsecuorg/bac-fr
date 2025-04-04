@@ -221,6 +221,72 @@ main {
     .print {
         left: 20px;
     }
+
+    /* BARRE DE NAVIGATION CACHÉE POUR MOBILE */
+    #navbar {
+        display: none;  /* Masquer la navbar par défaut */
+    }
+
+    #navbar.open {
+        display: flex;  /* Afficher la navbar quand elle a la classe 'open' */
+    }
+
+    .menu-button {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 20px;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 101;
+    }
+
+    /* Style du menu pour les écrans mobiles */
+    #navbar {
+        width: 60%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: left 0.3s ease;
+    }
+
+    #navbar.open {
+        left: 0; /* Quand ouvert, déplacer la navbar vers la gauche */
+    }
+
+    #navbar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    #navbar li {
+        margin: 20px 0;
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    #navbar.open li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    #navbar a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 15px;
+        display: block;
+        font-size: 18px;
+    }
 }
 
 /* VERSION IMPRESSION */
