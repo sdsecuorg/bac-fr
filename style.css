@@ -245,7 +245,7 @@ html, body {
 
     .print {
         width: 90%;
-        padding: 8px 12px;
+        padding: 8px 2px;
         font-size: 14px;
         position: relative;
     }
