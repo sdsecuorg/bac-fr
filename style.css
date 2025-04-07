@@ -90,11 +90,6 @@ header {
     z-index: -1; /* en arrière-plan */
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
 
 /* TEXTES & TITRES */
 .title {
@@ -139,10 +134,6 @@ html, body {
     left: 10px; /* 10px de la gauche */
     z-index: 1000; /* Permet de superposer les boutons au-dessus du contenu */
     text-decoration: none;
-}
-
-.print:where(a) {
-  line-height: normal;
 }
 
 .print:hover {
