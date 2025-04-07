@@ -207,7 +207,7 @@ html, body {
     .text, .text1, .maintitle, .themecolor {
         margin-left: auto;
         margin-right: auto;
-        text-align: center;
+        text-align: left;
         max-width: 90%;
     }
 
@@ -223,7 +223,7 @@ html, body {
     /* Ajustements des boutons */
     .print {
         font-size: 14px;
-        padding: 8px 12px;
+        padding: 8px 2px;
     }
 }
 
@@ -273,3 +273,4 @@ html, body {
         margin: 0 auto;
     }
 }
+
