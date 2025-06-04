@@ -31,16 +31,18 @@ body.dark-theme {
 
 .sidebar {
     height: 100%;
-    width: 250px;
+    width: 500px;
     position: fixed;
     top: 0;
-    left: -250px; 
+    left: -500px; 
     background-color: var(--nav-bg);
     overflow-y: auto;   /* <== ajouter overflow-y pour scroll vertical */
     overflow-x: hidden; /* garder overflow-x hidden */
     transition: left 0.3s ease;
     padding-top: 50px;
     z-index: 999;
+	    display: flex;
+    flex-direction: column;
 }
 
 
@@ -51,15 +53,18 @@ body.dark-theme {
 	margin-top: 0;
 	max-height: calc(100vh - 50px); /* 50px correspond au padding top */
     overflow-y: auto;
+	max-height: none;
+	    padding-bottom: 20px;
 }
 
 .sidebar ul li a {
-    padding: 12px 24px;
+    padding: 8px 16px; /* Réduction de l'espacement vertical et horizontal */
     display: block;
     color: var(--text-color);
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
+
 
 .sidebar ul li a:hover {
     background-color: var(--hover-bg);
