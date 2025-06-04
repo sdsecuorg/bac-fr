@@ -162,6 +162,28 @@ header {
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
 }
 
+.buttonpdf {
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px 4px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    border: 2px solid white; 
+    color: white;
+    background-color: #000000; 
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.buttonpdf:hover {
+    background-color: #1a1a1a; 
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
 
 @media print {
     body * {
@@ -317,4 +339,24 @@ header {
         font-size: 14px;
         padding: 10px;
     }
+}
+
+.boutonpdf {
+  position: absolute;
+  top: 20px; /* Espace depuis le haut */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1000; /* Pour rester au-dessus d'autres éléments si nécessaire */
+}
+
+.boutonpdf:hover {
+  background-color: white;
+  color: black;
 }
